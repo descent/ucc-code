@@ -5,7 +5,7 @@ C_SRC       = alloc.c ast.c decl.c declchk.c dumpast.c dom.c emit.c \
               ucl.c uildasm.c vector.c x86.c x86linux.c
 OBJS        = $(C_SRC:.c=.o)
 CC          = gcc
-CFLAGS      = -g -D_UCC
+CFLAGS      = -m32 -g -D_UCC
 UCC         = ../driver/ucc
 
 all: $(OBJS) assert.o
