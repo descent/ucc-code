@@ -18,11 +18,11 @@ static char *CCProg[] =
 };
 static char *ASProg[] = 
 { 
-	"/usr/bin/as", "-o", "$3", "$1", "$2", 0 
+	"/usr/bin/as", "--32", "-o", "$3", "$1", "$2", 0 
 };
 static char *LDProg[] = 
 {
-	"/usr/bin/gcc", "-o", "$3", "$1", "$2", UCCDIR "assert.o", "-lc", "-lm", 0 
+	"/usr/bin/gcc", "-m32", "-o", "$3", "$1", "$2", UCCDIR "assert.o", "-lc", "-lm", 0 
 };
 char *ExtNames[] = { ".c", ".i", ".s", ".o", ".a;.so", 0 };
 
